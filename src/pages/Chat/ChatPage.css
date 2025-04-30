@@ -1,0 +1,26 @@
+.chat-page {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-page-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 0 10%;
+  background-color: #f5f8fa;
+}
+
+@media (max-width: 1200px) {
+  .chat-page-content {
+    padding: 0 5%;
+  }
+}
+
+@media (max-width: 768px) {
+  .chat-page-content {
+    padding: 0 2%;
+  }
+}
