@@ -1,0 +1,209 @@
+.doctor-selector {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.selector-container {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+  width: 100%;
+  max-width: 800px;
+}
+
+.selector-section {
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.selector-title {
+  font-size: 1.1rem;
+  color: #2c3e50;
+  font-weight: 600;
+  margin: 0;
+  min-width: 150px;
+}
+
+.selector-content {
+  flex: 1;
+}
+
+/* Gender Selector Styles */
+.gender-options {
+  display: flex;
+  gap: 1rem;
+}
+
+.gender-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  transition: all 0.2s;
+  width: 75px;
+  height: 75px;
+}
+
+.gender-option:hover {
+  border-color: #3498db;
+}
+
+.gender-option.selected {
+  border-color: #3498db;
+  background-color: #ebf8ff;
+}
+
+.gender-option input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.gender-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.gender-option span {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #4a5568;
+}
+
+/* Selector Button Styles */
+.selector-button {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background-color: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  text-align: left;
+  font-size: 1rem;
+  color: #4a5568;
+  cursor: pointer;
+  transition: all 0.2s;
+  height: 45px;
+}
+
+.selector-button:hover {
+  border-color: #3498db;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Selection Grid Styles */
+.selection-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1rem;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.loading-message {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 2rem;
+  color: #4a5568;
+  font-size: 0.95rem;
+}
+
+.error-message {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 1.5rem;
+  color: #e53e3e;
+  background-color: #fff5f5;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  border-left: 3px solid #e53e3e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.retry-button {
+  background-color: #e53e3e;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.retry-button:hover {
+  background-color: #c53030;
+}
+
+/* Chat Button Styles */
+.chat-button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.chat-button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  min-width: 200px;
+}
+
+.chat-button:hover {
+  background-color: #0d9eff;
+}
+
+.chat-button:disabled {
+  background-color: #a0aec0;
+  cursor: not-allowed;
+}
+
+/* Error Modal Styles */
+.error-modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.error-modal-content p {
+  margin-bottom: 1.5rem;
+  color: #e53e3e;
+  text-align: center;
+}
+
+.error-modal-content button {
+  min-width: 100px;
+}
+
+@media (max-width: 768px) {
+  .doctor-selector {
+    padding: 1rem;
+  }
+
+  .selector-container {
+    padding: 1.5rem;
+  }
+
+  .selection-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+}

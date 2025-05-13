@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import Login from './Login';
 import Signup from './Signup';
+import Header from '../../components/Header/Header';
 import './styles.css';
 
 interface AuthProps {
@@ -24,12 +25,15 @@ const Auth: React.FC<AuthProps> = ({ onLoginSuccess }) => {
   };
 
   return (
-    <div className="auth-page">
-      {isLoginView ? (
-        <Login onSwitchToSignup={switchToSignup} onLoginSuccess={onLoginSuccess} />
-      ) : (
-        <Signup onSwitchToLogin={switchToLogin} />
-      )}
+    <div className="auth-page-container">
+      <Header showLogout={false} />
+      <div className="auth-page">
+        {isLoginView ? (
+          <Login onSwitchToSignup={switchToSignup} onLoginSuccess={onLoginSuccess} />
+        ) : (
+          <Signup onSwitchToLogin={switchToLogin} />
+        )}
+      </div>
     </div>
   );
 };

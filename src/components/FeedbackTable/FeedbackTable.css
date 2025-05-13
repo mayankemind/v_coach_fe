@@ -1,0 +1,41 @@
+.feedback-table {
+  margin: 1.5rem 0;
+}
+
+.feedback-metrics-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 0.95rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: white;
+}
+
+.feedback-metrics-table th {
+  background-color: #3182ce;
+  color: white;
+  font-weight: 600;
+  text-align: left;
+  padding: 0.9rem 1.2rem;
+  border-bottom: 2px solid #2c5282;
+}
+
+.feedback-metrics-table td {
+  padding: 0.9rem 1.2rem;
+  border-bottom: 1px solid #e2e8f0;
+  vertical-align: top;
+}
+
+.feedback-metrics-table tr:last-child td {
+  border-bottom: none;
+}
+
+.feedback-metrics-table tr:nth-child(even) {
+  background-color: #f8fafc;
+}
+
+.feedback-metrics-table tr:hover {
+  background-color: #edf2f7;
+}

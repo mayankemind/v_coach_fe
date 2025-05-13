@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from '../../components/Header/Header';
 import PageHeader from '../../components/PageHeader/PageHeader';
-import DoctorGrid from '../../components/DoctorGrid/DoctorGrid';
+import DoctorSelector from '../../components/DoctorSelector/DoctorSelector';
 import './Dashboard.css';
 
 const Dashboard: React.FC = () => {
@@ -9,8 +9,8 @@ const Dashboard: React.FC = () => {
     <div className="dashboard">
       <Header />
       <div className="dashboard-content">
-        <PageHeader title="Choose your doctor" />
-        <DoctorGrid />
+        <PageHeader title="Configure Your Doctor" />
+        <DoctorSelector />
       </div>
     </div>
   );

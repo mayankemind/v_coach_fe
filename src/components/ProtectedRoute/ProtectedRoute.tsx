@@ -8,8 +8,8 @@ interface ProtectedRouteProps {
 const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ isAuthenticated }) => {
   const location = useLocation();
 
+  // If not authenticated, redirect to the login page
   if (!isAuthenticated) {
-    // Redirect to the login page if not authenticated
     return <Navigate to="/login" state={{ from: location }} replace />;
   }
 

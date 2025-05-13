@@ -1,0 +1,139 @@
+.profile-page {
+  min-height: 100vh;
+  background-color: #f5f8fa;
+}
+
+.profile-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.profile-header {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1rem;
+}
+
+.profile-header h1 {
+  color: #2c3e50;
+  margin: 1rem 0;
+  font-size: 2rem;
+}
+
+.back-button {
+  /* align-self: flex-start; */
+  background: none;
+  border: none;
+  color: #3498db;
+  font-size: 1rem;
+  cursor: pointer;
+  /* padding: 0.5rem 0; */
+  display: flex;
+  align-items: center;
+  background-color: #9cc1da;
+}
+
+.back-button:hover {
+  text-decoration: underline;
+}
+
+.profile-loading {
+  text-align: center;
+  padding: 2rem;
+  color: #7f8c8d;
+  font-size: 1.1rem;
+}
+
+.profile-error {
+  text-align: center;
+  padding: 1.5rem;
+  color: #e74c3c;
+  background-color: #fdeaea;
+  border-radius: 8px;
+  font-size: 1rem;
+  border-left: 4px solid #e74c3c;
+  margin: 1rem 0;
+}
+
+.profile-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.profile-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #3498db;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  color: white;
+  font-weight: bold;
+  margin: 0 auto;
+}
+
+.profile-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.profile-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.profile-field label {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+  font-weight: 500;
+}
+
+.profile-field p {
+  font-size: 1.1rem;
+  color: #2c3e50;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #ecf0f1;
+}
+
+.status-active {
+  color: #27ae60 !important;
+  font-weight: 600;
+}
+
+.status-inactive {
+  color: #e74c3c !important;
+  font-weight: 600;
+}
+
+.user-id {
+  font-family: monospace;
+  font-size: 0.9rem !important;
+  color: #7f8c8d !important;
+  word-break: break-all;
+}
+
+@media (min-width: 768px) {
+  .profile-card {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  
+  .profile-avatar {
+    margin: 0;
+  }
+  
+  .profile-details {
+    flex: 1;
+  }
+}

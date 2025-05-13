@@ -1,10 +1,17 @@
 /* Auth Container Styles */
+.auth-page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f5f8fa;
+}
+
 .auth-page {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  background-color: #f5f8fa;
+  flex: 1;
+  padding: 20px 0;
 }
 
 .auth-container {
@@ -93,4 +100,63 @@
 
 .auth-switch span:hover {
   text-decoration: underline;
+}
+
+/* Error message styles */
+.error-message {
+  background-color: #fee2e2;
+  color: #b91c1c;
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-bottom: 10px;
+  border-left: 4px solid #ef4444;
+}
+
+/* Disabled button styles */
+.auth-button:disabled {
+  background-color: #a0aec0;
+  cursor: not-allowed;
+}
+
+/* Password input container styles */
+.password-input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-input-container input {
+  width: 100%;
+  padding-right: 40px; /* Make room for the eye icon */
+}
+
+.password-toggle-button {
+  position: absolute;
+  right: 12px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #718096;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  font-size: 18px;
+}
+
+.password-toggle-button:hover {
+  color: #4a5568;
+}
+
+/* Success message styles */
+.success-message {
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.success-message p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  color: #2d3748;
 }
