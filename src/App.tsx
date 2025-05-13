@@ -115,15 +115,16 @@ function App() {
           <Route element={<ProtectedRoute isAuthenticated={isAuthenticated} />}>
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/profile" element={<Profile />} />
+            <Route path="/chat/:specialty" element={<ChatPage />} />
             <Route path="/feedback/:sessionId" element={<FeedbackPage />} />
           </Route>
         </Routes>
       </BrowserRouter>
-      <BrowserRouter>
+      {/* <BrowserRouter>
         <Routes>
             <Route path="/chat" element={<ChatPage />} />
         </Routes>
-      </BrowserRouter>
+      </BrowserRouter> */}
     </div>
   )
 }

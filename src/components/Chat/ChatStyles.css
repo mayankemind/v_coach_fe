@@ -10,12 +10,19 @@
 
 .chat-header {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
   padding: 1rem 1.5rem;
   background-color: #ffffff;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
   z-index: 10;
   height: 60px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
 }
 
 .back-button {
@@ -39,6 +46,7 @@
 .doctor-header {
   display: flex;
   align-items: center;
+  margin-left: 0.5rem;
 }
 
 .doctor-header-icon {
@@ -165,19 +173,119 @@
   transition: all 0.2s;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
+.settings {
+  display: flex;
+  align-items: center;
+}
 
+.settings-button{
+  background-color: transparent;
+  color: #000;
+  cursor: pointer;
+  transition: transform 0.2s;
+  padding: 0.5rem;
+}
+
+.settings-button:hover {
+  transform: none;
+}
+
+/* Settings Modal */
+.settings-modal {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: 250px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 100;
+  overflow: hidden;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.settings-modal-content {
+  padding: 1rem;
+}
+
+.settings-modal h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #2d3748;
+  font-size: 1.1rem;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 0.5rem;
+}
+
+.settings-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  padding: 0.5rem 0;
+}
+
+.settings-option label {
+  font-size: 0.95rem;
+  color: #4a5568;
+}
+
+.speaker-toggle {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #3498db;
+  color: #fff;
+  transition: color 0.2s;
+}
+
+/* .speaker-toggle:hover {
+  background-color: #2980b9;
+} */
 .speak-btn {
+  height: 3rem ;
   width: 3rem;
-  height: 3rem;
-  background-color: rgb(228, 84, 84);
-  color: white;
   flex-shrink: 0;
   padding: 0rem;
+  transition: all 0.3s ease;
 }
 
 .speak-btn:hover {
   background-color: rgb(207, 63, 63);
   transform: scale(1.05);
+}
+
+.speak-btn.speaking {
+  background-color: #e74c3c;
+  animation: pulse-recording 2s infinite;
+  box-shadow: 0 0 0 rgba(231, 76, 60, 0.4);
+}
+
+@keyframes pulse-recording {
+  0% {
+    box-shadow: 0 0 0 0 rgba(231, 76, 60, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(231, 76, 60, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(231, 76, 60, 0);
+  }
 }
 
 .send-button {

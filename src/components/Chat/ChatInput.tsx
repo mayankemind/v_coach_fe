@@ -1,13 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './ChatStyles.css';
 
 interface ChatInputProps {
   onSendMessage: (message: string) => void;
   isLoading?: boolean;
+  transcribedText?: string;
 }
 
-const ChatInput: React.FC<ChatInputProps> = ({ onSendMessage, isLoading = false }) => {
+const ChatInput: React.FC<ChatInputProps> = ({
+  onSendMessage,
+  isLoading = false,
+  transcribedText = ''
+}) => {
   const [message, setMessage] = useState('');
+
+  // Update message when transcribed text changes
+  useEffect(() => {
+    if (transcribedText) {
+      setMessage(transcribedText);
+    }
+  }, [transcribedText]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
